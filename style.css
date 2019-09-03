@@ -119,9 +119,9 @@ input[type=text]{
 
 @media all and (max-width: 600px){
 	div{
-		padding: .25rem;
+		padding: .5rem;
 	}
-	header{
+	#header{
 		border: 2px solid #000;
 	}
 	input[type=text]{
