@@ -39,6 +39,12 @@
 	</div>
 	
 	<script>
+		document.getElementById("input").addEventListener("keyup", event => {
+  			if (event.isComposing || event.keyCode === 13) {
+    		return;
+ 			 }
+  			translate()
+		});
 
 		function translate(){
 			var input = document.getElementById("input").value;
