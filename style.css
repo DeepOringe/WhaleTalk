@@ -115,3 +115,17 @@ input[type=text]{
 	color: tomato;
 }
 
+/* Adjustments for small screens */
+
+@media all and (max-width: 600px){
+	div{
+		padding: .25rem;
+	}
+	header{
+		border: 2px solid #000;
+	}
+	input[type=text]{
+		border-bottom: 2px dotted #000;
+	}
+
+}
