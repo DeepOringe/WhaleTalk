@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html class="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Whale Talk | A beginner's guide to cetacean tongues</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+	<link
+		href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,300i,400,400i,500,500i,600,600i,700,800,900&display=swap"
+		rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A translation tool for cetacean tongues" />
+	<meta name="author" content="Samantha Siefert">
+</head>
+
+<body>
+	<div id="header">
+		<p>I speak whale and so can  you!</p>
+	</div>
+	<div id="whale-container">
+		<svg xmlns="http://www.w3.org/2000/svg" id="svg-whale" viewBox="0 0 750 400" version="1">
+		<g id="">
+			<path id="svg-whale-path1" 
+					d="M486.472 249.44c17.36-18.575-2.617-52.276-1.19-100.234 1.423-47.862 33.75-64.176 33.75-64.176s-10.328 4.037-6.983 27.38c2.838 19.799 9.131 42.82 23.505 55.578 14.786 12.227 39.116 45.62 30.142 63.456 18.092-6.141 46.272 8.399 67.086 27.672 21.721 20.558 35.63 30.454 50.69 35.268 21.623 6.911 37.47.815 37.47.815-24.748 21.36-72.188 21.675-103.153 15.92-30.294-5.63-47.194-22.113-74.752-15.8-34.973 11.952-92.855 66.093-181.523 77.64-88.67 11.547-298.262-20.392-323.396-46.824-25.134-26.433-2.099-35.332-3.751-34.14-.224-.238 6.034 5.976 133.22 37.494-22.816-3.667-138.2-40.993-137.985-42.525.322.109 51.894-190.668 94.965-211.04 43.07-20.372 140.966 38.962 216.25 82.988 89.277 52.208 125.84 111.729 145.655 90.528z"/>
+			<path id="svg-whale-path2" 
+					d="M220 314.505a13.571 12.143 0 1 1-27.143 0 13.571 12.143 0 1 1 27.143 0z" transform="matrix(.85895 0 0 .80874 30.24 43.723)"/></g>
+		</svg>
+	</div>
+	<div id="humans-say">
+			<label for="input">Humans say</label>
+			<input type="text" id="input" oninput="translate()" name="input" required minlength="1" maxlength="" placeholder="type anything" >
+	</div>
+	<div id="whales-say">
+			<p>Whales say</p>
+			<p id="translation"></p>
+	</div>
+	
+	<script>
+
+		function translate(){
+			var input = document.getElementById("input").value;
+			
+			var vowels = ["a", "e", "i", "o", "u"];
+
+			let resultArray = [];
+
+			for (let i=0; i < input.length; i++) {
+	  			resultArray.push(input[i])
+				for (let j=0; j < vowels.length; j++){
+      				if (input[i] === vowels[j]){
+        			resultArray.push(input[i])
+      				} 
+    			}
+			}
+
+			document.getElementById("translation").innerHTML = resultArray.join('');
+			
+		}
+		
+	</script>
+	
+</body>
+
+</html>
