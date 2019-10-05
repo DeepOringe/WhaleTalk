@@ -124,7 +124,7 @@ input[type=text]{
 		left: 98px;
 	}
 	input[type=text]{
-		border-bottom: 2px dotted #000;
+		/* border-bottom: 2px dotted #000; */
 	}
 
 }
