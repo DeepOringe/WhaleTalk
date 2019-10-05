@@ -113,6 +113,9 @@ input[type=text]{
 /* Adjustments for small screens */
 
 @media all and (max-width: 600px){
+	*{
+		letter-spacing: 3px;
+	}
 	div{
 		padding: 1rem;
 	}
